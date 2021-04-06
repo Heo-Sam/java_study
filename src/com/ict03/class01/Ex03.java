@@ -1,0 +1,34 @@
+package com.ict03.class01;
+
+public class Ex03 {
+	// 메소드: 기능 및 동작
+	//  - 메소드를 호출하면 해당 메소드가 실행된다.
+	//  - 실행이 끝나면 메소드를 호출한 곳으로 되돌아간다.
+	//  - 되돌아갈 때 결과를 가지고 가는 경우와 아닌 경우로 나눠진다.
+	//		이 때, 결과를 받지 않는 경우를 void라고 하고,
+	//		결과를 받는 경우는 그 결과의 자료형을 반환형이라고 한다.
+	//			ㄴ반환형이 있는 경우에는 반드시 [return '보낼데이터';]가 마지막 줄에 존재해야 한다.
+	
+	int s1 = 10;
+	int s2 = 5;
+	int res = 0;
+	
+	// 반환형 없음
+	public void plus01() {
+		System.out.println(2);
+		res = s1 + s2;
+	}
+	
+	// 반환형 있는 경우
+	public int sub01() {
+		int result = s1 - s2;
+		
+		return result;
+	}
+	
+	
+	
+	
+	
+	
+}
