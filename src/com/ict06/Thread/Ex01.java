@@ -3,7 +3,7 @@ package com.ict06.Thread;
 public class Ex01 {
 	public static void main(String[] args) {
 		// Thread 생성자
-		//  - Thread() : 기본생서자
+		//  - Thread() : 기본생성자
 		//	- Thread(Runnable target) : Runnable 인터페이스를 인자로 받아서 처리
 		//								익명 내부클래스 사용할 수 있다(Anonymous)
 		//	- Thread(Runnable target, String name) : Runnable 인터페이스를 인자로 받아서 처리
@@ -38,6 +38,7 @@ public class Ex01 {
 		int result = test.sub(8, 5);
 		System.out.println("7" + Thread.currentThread().getName());
 		System.out.println(result);
+		
 	}
 
 }
