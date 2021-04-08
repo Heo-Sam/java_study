@@ -21,10 +21,6 @@ public class Ex19 {
 		System.out.print("붙여넣기 할 위치와 파일 이름 : ");
 		String pathname_paste = scan.next();
 		
-		//pathname_copy = "C:"+File.separator+"sammy_study"+File.separator+"util"+"ict06.txt";
-		//pathname_paste = "C:"+File.separator+"sammy_study"+File.separator+"util"+File.separator+"res"
-		//				+File.separator+"ict07.txt";
-		
 		
 		File file1 = new File(pathname_copy);
 		File file2 = new File(pathname_paste);
