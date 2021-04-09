@@ -38,7 +38,7 @@ public class Ex25_Input {
 		
 	//★★	// 정렬을 어찌할 지 생각해보기..	
 			// 컬렉션을 배열로 변경해서 정렬
-	/*		Ex25_VO[] arr = (Ex25_VO[])(list.toArray());
+			Ex25_VO[] arr = (Ex25_VO[])list.toArray(new Ex25_VO[5]);
 			
 			Ex25_VO tmp = new Ex25_VO(); // 임시저장할 공간
 			for (int i = 0; i < arr.length-1; i++) {
@@ -51,7 +51,7 @@ public class Ex25_Input {
 				}
 			}
 			System.out.println();
-			System.out.println("이름\t총점\t평균\t학점");
+	/*		System.out.println("이름\t총점\t평균\t학점");
 			for (Ex25_VO k : arr) {
 				System.out.print(k.getName()+"\t");
 				System.out.print(k.getSum()+"\t");
