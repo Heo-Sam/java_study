@@ -18,7 +18,7 @@ public class Ex02 {
 		InputStreamReader isr = null;
 		BufferedReader br = null;
 		
-		String pathname = "C:"+File.separator+"sammy_study"+File.separator+"util"+File.separator+"네이버영화.txt";
+		String pathname = "C:"+File.separator+"sammy_study"+File.separator+"util"+File.separator+"기상청.txt";
 		File file = new File(pathname);
 		
 		FileWriter fw = null;
@@ -26,7 +26,7 @@ public class Ex02 {
 				
 		try {
 			// 먼저 웹페이지를 읽자
-			URL url = new URL("https://movie.naver.com/");
+			URL url = new URL("https://www.kma.go.kr/XML/weather/sfc_web_map.xml");
 			is = url.openStream();
 			isr = new InputStreamReader(is,"utf-8");
 			br = new BufferedReader(isr);
