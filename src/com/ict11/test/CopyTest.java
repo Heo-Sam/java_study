@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+
+// 문서파일을 복붙하는 경우
 public class CopyTest {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -26,24 +28,26 @@ public class CopyTest {
 		BufferedWriter bw = null;
 		
 		try {
-			
+			// 읽기			
 			fr = new FileReader(file1);
 			br = new BufferedReader(fr);
-			fw = new FileWriter(file2);
-			bw = new BufferedWriter(fw);
-			
+			String msg = null ;
 			StringBuffer sb = new StringBuffer();
-			String msg ;
 			while ((msg=br.readLine()) != null) {
 				sb.append(msg+"\n");
 			}
-			System.out.println(sb.toString());
 			
+			// 쓰기
+			fw = new FileWriter(file2);
+			bw = new BufferedWriter(fw);			
 			
+			// String str = sb.toString();
+			// bw.write(str);
 			bw.write(sb.toString());
 			bw.flush();
 		} catch (Exception e) {
 			System.out.println(e);
+		} finally {
 			try {
 				bw.close();
 				fw.close();
