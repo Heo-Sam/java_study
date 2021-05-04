@@ -46,6 +46,8 @@ public class Ex06_DAO {
 	 // 전체 정보 출력하는 메소드
 	 public void getList() {
 		 try {
+			 conn = getConnection();
+			 
 			 String sql = "SELECT * FROM Book ORDER BY bookid";
 			 pstmt = conn.prepareStatement(sql);
 			 rs = pstmt.executeQuery();
@@ -72,6 +74,8 @@ public class Ex06_DAO {
 	// 삽입하는 메소드
 	 public void getInsert(int i_bookid, String i_bookname, String i_publisher, int i_price ) {
 		 try {
+			 conn = getConnection();
+			 
 			 String sql = "INSERT INTO Book VALUES (?,?,?,?)";
 			 pstmt = conn.prepareStatement(sql);
 			 pstmt.setInt(1, i_bookid);
@@ -100,6 +104,8 @@ public class Ex06_DAO {
 	// 삭제하는 메소드
 	 public void getDelete(int del_bookid) {
 		 try {
+			 conn = getConnection();
+			 
 			 String sql = "DELETE FROM Book WHERE bookid=?";
 			 pstmt = conn.prepareStatement(sql);
 			 pstmt.setInt(1, del_bookid);
@@ -126,6 +132,8 @@ public class Ex06_DAO {
 	// 수정하는 메소드
 	public void getUpdate(String u_bookname, String u_publisher, int u_price, int u_bookid) {
 		try {
+			conn = getConnection();
+			
 			String sql = "UPDATE Book SET bookname=?, publisher=?, price=? WHERE bookid=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, u_bookname);
